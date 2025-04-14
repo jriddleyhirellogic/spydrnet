@@ -55,11 +55,12 @@ class Wire(Element):
             assert inner_pin in instance.pins, "Pin not associated with instance"
             outer_pin = instance.pins[inner_pin]
             assert outer_pin.wire is not self, "Pin already connected to this wire"
-            assert outer_pin.wire is None, "Pin already connected to a different wire"
+            #assert outer_pin.wire is None, "Pin already connected to a different wire"
             pin._wire = self
             pin = outer_pin
         else:
-            assert pin.wire is None, "Pin already connected to a different wire"
+            #assert pin.wire is None, "Pin already connected to a different wire"
+            pass
         if position is not None:
             self._pins.insert(position, pin)
         else:

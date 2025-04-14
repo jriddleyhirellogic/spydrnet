@@ -17,7 +17,7 @@ if sys.version_info[:2] < (3, 6):
 # Write the version information.
 sys.path.insert(0, 'spydrnet')
 import release
-version = release.update_versionfile()
+version = "1.13.1" #release.update_versionfile()
 sys.path.pop(0)
 
 with open("README.rst", "r") as fh:
